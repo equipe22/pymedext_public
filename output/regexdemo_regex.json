@@ -1,0 +1,112 @@
+{
+    "annotations": [
+        {
+            "type": "raw_text",
+            "value": "le patient a été en contact avec des porteurs du covid-19. Des tests complémentaires\ndoivent être réalisé. il prend du dolprane. ce texte sera augmenté dans le temps\n",
+            "span": [
+                0,
+                166
+            ],
+            "source": null,
+            "source_ID": "../data/regexdemo.txt",
+            "isEntity": false,
+            "attributes": null,
+            "id": "709c0872-bbb2-11ea-9e27-0242ac110002"
+        },
+        {
+            "type": "preprocessed_text",
+            "value": "le patient a été en contact avec des porteurs du covid - 19 . Des tests complémentaires\ndoivent être réalisé . il prend du dolprane . ce texte sera augmenté dans le temps\n",
+            "span": [
+                0,
+                171
+            ],
+            "source": "ProprocessText.v1",
+            "source_ID": "709c0872-bbb2-11ea-9e27-0242ac110002",
+            "isEntity": false,
+            "attributes": null,
+            "id": "709c0872-bbb2-11ea-9e27-0242ac110002"
+        },
+        {
+            "type": "sentence",
+            "value": "le patient a ete en contact avec des porteurs du covid - 19 .",
+            "span": [
+                0,
+                61
+            ],
+            "source": "SentenceTokenizer.v1",
+            "source_ID": "709c0872-bbb2-11ea-9e27-0242ac110002",
+            "isEntity": false,
+            "attributes": null,
+            "id": "709c0872-bbb2-11ea-9e27-0242ac110002"
+        },
+        {
+            "type": "sentence",
+            "value": "Des tests complementaires",
+            "span": [
+                62,
+                87
+            ],
+            "source": "SentenceTokenizer.v1",
+            "source_ID": "709c0872-bbb2-11ea-9e27-0242ac110002",
+            "isEntity": false,
+            "attributes": null,
+            "id": "709c0872-bbb2-11ea-9e27-0242ac110002"
+        },
+        {
+            "type": "sentence",
+            "value": "doivent etre realise .",
+            "span": [
+                88,
+                110
+            ],
+            "source": "SentenceTokenizer.v1",
+            "source_ID": "709c0872-bbb2-11ea-9e27-0242ac110002",
+            "isEntity": false,
+            "attributes": null,
+            "id": "709c0872-bbb2-11ea-9e27-0242ac110002"
+        },
+        {
+            "type": "sentence",
+            "value": "il prend du dolprane .",
+            "span": [
+                111,
+                133
+            ],
+            "source": "SentenceTokenizer.v1",
+            "source_ID": "709c0872-bbb2-11ea-9e27-0242ac110002",
+            "isEntity": false,
+            "attributes": null,
+            "id": "709c0872-bbb2-11ea-9e27-0242ac110002"
+        },
+        {
+            "type": "sentence",
+            "value": "ce texte sera augmente dans le temps",
+            "span": [
+                134,
+                170
+            ],
+            "source": "SentenceTokenizer.v1",
+            "source_ID": "709c0872-bbb2-11ea-9e27-0242ac110002",
+            "isEntity": false,
+            "attributes": null,
+            "id": "709c0872-bbb2-11ea-9e27-0242ac110002"
+        },
+        {
+            "type": "regex_fast",
+            "value": "sars-cov-2",
+            "span": [
+                51,
+                59
+            ],
+            "source": "regex_fast.v1",
+            "source_ID": "709c0872-bbb2-11ea-9e27-0242ac110002",
+            "isEntity": true,
+            "attributes": {
+                "ngram": "covid-19"
+            },
+            "id": "98a68784-bbb2-11ea-9e27-0242ac110002"
+        }
+    ],
+    "ID": "981a78ca-bbb2-11ea-9e27-0242ac110002",
+    "source_ID": "../data/regexdemo.txt"
+}
