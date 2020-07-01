@@ -45,3 +45,6 @@ annote: ##  run annotation with main_regex
 
 omop: ##  transform annotation to omop data
 	@bash bin/annoteToOmop.sh
+
+omopdb: ## WARNING load data to omopdb. Need to be in the docker ( make demo)
+	@bash bin/annoteToOmopDB.sh
