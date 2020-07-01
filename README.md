@@ -15,8 +15,8 @@ will annotate a file and store a results in the output folder. if not specify. D
 
 # Pymedext to Omop
 ```bash
-cd src
-python3 omop_prod_norm_graph.py  -i ../output 
+cd src python3 pymedext_to_omop.py  -i ../output 
+
 
 
 ```
