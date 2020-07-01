@@ -1,13 +1,14 @@
 # Data wrangling
 * Summary
 ** data wrangling
-how the data are transformed, from document
-to other format type
+how data are transformed, from document to other format type
 ** data source
 how to send data into a a database, just the
 communication with a database
 ** data connector
 just the basic connector type ssh, api, database
+
+* define the minimal code which willl be pymedext core without to much annotators
 
 * general recommendations
 - [ ] use logger instead of print
