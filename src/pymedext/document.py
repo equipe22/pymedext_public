@@ -32,7 +32,7 @@ class Document:
             for thisPath in pathToconfig:
                 self.loadFromData(thisPath)
 
-     def loadFromData(self, pathToconfig):
+    def loadFromData(self, pathToconfig):
          """Transform json Pymedext to Document object
 
          :param pathToconfig: list of path to json files,
@@ -40,10 +40,9 @@ class Document:
          :rtype: none
 
          """
-        with open(pathToconfig) as f:
-            mesannotations=json.load(f)
-
-        for annot in mesannotations["annotations"]:
+         with open(pathToconfig) as f:
+             mesannotations=json.load(f)
+         for annot in mesannotations["annotations"]:
             if "empty" not in annot["value"]:
                 if "raw_text" in annot["type"]:
                     if self.ID == None:
