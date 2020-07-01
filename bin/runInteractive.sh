@@ -40,6 +40,6 @@ printlnred $0
 printlnred $base
 
 docker run -it --rm  \
- -v $base/..:/home/data pymedext-ehr bash
- # --user 1000:1000
+ --network pymedext-network -v $base/..:/home/data pymedext-ehr bash
+
 printlnred "interacif mode is over"
