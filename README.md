@@ -7,7 +7,7 @@ wrapper around Pymedext 2 examples:
 
 ```bash
 cd src
-python3 main_regex.py -i ../data/regexdemo.txt -o ../output 
+python3 main_regex_v0.0.1.py -i ../data/regexdemo.txt -o ../output 
 
 ```
 
@@ -46,5 +46,7 @@ demo                           start a demo pymdext container to run it
 help                           Display available commands in Makefile
 omopdb                         WARNING load data to omopdb. Need to be in the docker ( make demo)
 omop                            transform annotation to omop data
+install                        local install of pymedext packages
+uninstall                      uninstall local pymedext packages
 
 ```
