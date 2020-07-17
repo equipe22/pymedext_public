@@ -1,4 +1,6 @@
-FROM python:3.7.2-slim
+# FROM python:3.7.2-slim
+FROM pymedext-core:v0.0.1
+# need pymedext-core
 # HEGP NECKER
 #special variables to define in order to process
 #and generate the provenance of the script
@@ -16,10 +18,10 @@ ENV treatFolder="True"
 ENV sources="{'romedi':'','rxnorm':'-s'}"
 
 WORKDIR /home
-RUN mkdir src data
-COPY src src/
-RUN pip3 install -r /home/src/pymedext/requirements.txt
-RUN pip3 install -r /home/src/pyromedi/requirements.txt
+RUN mkdir pubsrc
+COPY src pubsrc/
+RUN pip3 install -r /home/pubsrc/pymedext/requirements.txt
+RUN pip3 install -r /home/pubsrc/pyromedi/requirements.txt
 
 # RUN pip3 install SPARQLWrapper
 # ADD ressources/ /home/src/ressources/
