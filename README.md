@@ -50,3 +50,62 @@ install                        local install of pymedext packages
 uninstall                      uninstall local pymedext packages
 
 ```
+
+# Add Annotators
+if you want to expand pymedext and add a new annotator you will have to 
+
+```python 
+#from core import annotators
+from pymedext_core import annotators
+
+# Implement a new class which extend annotators.Annotator
+class PreprocessText(annotators.Annotator):
+# you need to implement the function annotate_function and
+# return a list of annotors.Annotation object
+    def annotate_function(self, _input): 
+        inp = self.get_first_key_input(_input)[0]
+        
+        clean = self.clean_text(inp.value)
+        
+        return [annotators.Annotation(type=self.key_output,
+                         value = clean, 
+                         span = (0, len(clean)),
+                         source_ID = inp.ID,
+                         source= self.ID)]
+
+
+
+```
+in the pymedtator.py script add your annotators to the list
+
+```python
+
+from .annotators import regexFast, PreprocessText, SentenceTokenizer, DictionaryCatcher, RomediCatcher, DoseCatcher
+from .romedi import Romedi
+
+
+```
+
+# Use pymedext in a py script
+
+``` python
+#import dependencies
+from pymedext import pymedtator # contains your annotators
+from pymedext_core import pymedext # contains Document and other pymed connector object
+
+thisDoc=pymedext.Document(raw_text= " a document demo you want to work with"
+, ID="your doc id")
+
+#define your annotator
+preprocessor = pymedtator.PreprocessText(["raw_text"], "preprocessed_text", 'ProprocessText.v1')
+
+# add all your annotators in a list
+annotators =[preprocessor]
+# annotate your document
+thisDoc.annotate(annotators)
+
+#write your annotation in pymedext json
+thisDoc.writeJson("outputfile.txt")
+
+
+```
