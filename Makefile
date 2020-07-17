@@ -37,6 +37,12 @@ help: ## Display available commands in Makefile
 build: ## Build dinstance
 	@bash bin/build.sh
 
+install: ## local install of pymedext packages
+	@bash bin/install.sh
+
+uninstall: ## uninstall local pymedext packages
+	@bash bin/uninstall.sh
+
 demo: ##  start a demo pymdext container to run it
 	@bash bin/runInteractive.sh
 
