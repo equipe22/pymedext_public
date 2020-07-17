@@ -20,8 +20,10 @@ ENV sources="{'romedi':'','rxnorm':'-s'}"
 WORKDIR /home
 RUN mkdir pubsrc
 COPY src pubsrc/
-RUN pip3 install -r /home/pubsrc/pymedext/requirements.txt
-RUN pip3 install -r /home/pubsrc/pyromedi/requirements.txt
+RUN pip3 install git+https://github.com/equipe22/pymedext_public.git
+
+# RUN pip3 install -r /home/pubsrc/pymedext/requirements.txt
+# RUN pip3 install -r /home/pubsrc/pyromedi/requirements.txt
 
 # RUN pip3 install SPARQLWrapper
 # ADD ressources/ /home/src/ressources/
@@ -30,5 +32,5 @@ WORKDIR /home/data
 COPY bin/installstopword.py .
 RUN python3 installstopword.py
 
-RUN apt-get update && apt-get install -y --allow-unauthenticated procps
+# RUN apt-get update && apt-get install -y --allow-unauthenticated procps
 CMD ["python3", "/home/src/omop_prod_norm_graph.py ","--inputFolder","$input"]
