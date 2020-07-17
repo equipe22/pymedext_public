@@ -61,7 +61,7 @@ if __name__ == "__main__":
     resourcePath=os.getcwd().replace("src","resources/")
     # Preprocess of Romedi (should be done once)
     logger.info("Preprocess of Romedi (should be done once)" )
-    romedi_ttl_file = "/home/data/data/Romedi2-2-0.ttl"
+    romedi_ttl_file = resourcePath+"Romedi2-2-0.ttl"
     romedi_cache = 'cache_Romedi2-2-0.p'
     romedi = pymedtator.Romedi(romedi_ttl_file, from_cache = None)
     romedi.save(romedi_cache)
