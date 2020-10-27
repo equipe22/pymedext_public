@@ -1,5 +1,4 @@
 # pymedext_public
-Based on the work of Antoine Neuraz !
 
 wrapper around Pymedext 2 examples:
 
